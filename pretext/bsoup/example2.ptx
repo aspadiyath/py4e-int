@@ -42,18 +42,45 @@ for ending in endings:
         </statement>
       </activity>
 
-      <p>This code is made up of three plans. Click on each of the plans below to learn more about it.</p>
+      <p>This code is made up of three plans. <em>Click on each of the plans below to learn more about it.</em></p>
       <p>
-        <strong>Plan 3: Get a soup from multiple URLs</strong>
-        <url href="plan3.html"/>
+        <url href="plan3.html">Plan 3: Get a soup from multiple URLs
+              <program language="python3" label="plan3-editor-e2">
+        <code>
+# Load libraries for web scraping
+from bs4 import BeautifulSoup
+import requests
+# Get a soup from multiple URLs
+base_url = 'https://web.archive.org/web/20230128074139/https://www.si.umich.edu/people/'
+endings = ['barbara-ericson', 'steve-oney', 'paul-resnick']
+for ending in endings:
+    url = base_url + ending
+    r = requests.get(url)
+    soup = BeautifulSoup(r.content, 'html.parser')
+        </code>
+      </program>
+        </url>
       </p>
       <p>
-        <strong>Plan 4: Get info from a single tag</strong>
-        <url href="plan4.html"/>
+        <url href="plan4.html">Plan 4: Get info from a single tag
+              <program language="python" label="plan4-editor-e2">
+        <code>
+# Get first tag of a certain type from the soup
+tag = soup.find('a', class_='item-teaser--heading-link')
+# Get info from tag
+info = tag.get('href')
+        </code>
+      </program></url>
       </p>
-      <p>
-        <strong>Plan 9: Print info</strong>
-        <url href="plan9.html"/>
+       <p>
+        <url href="plan9.html">Plan 9: Print the info
+          <program language="python" label="plan9-editor-e2">
+    <code>
+   # Print the info
+   print(collect_info)
+    </code>
+          </program>
+          </url>
       </p>
     </introduction>
   </section>

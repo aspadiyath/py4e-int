@@ -33,10 +33,11 @@
           <p>What should fill the slot in Plan 9 below?</p>
           <program language="python3" label="plan9_fill_in-editor">
             <code xml:space="preserve">
-#Get one webpage
+# Get one webpage
 # Load libraries for web scraping
 from bs4 import BeautifulSoup
 import requests
+
 # Get a soup from a URL
 url = 'https://cottageinn.com/pick-a-location/'
 r = requests.get(url)
@@ -45,6 +46,7 @@ soup = BeautifulSoup(r.content, 'html.parser')
 #Get info from all tags of a certain type
 # Get all tags of a certain type from the soup
 tags = soup.find_all('h3')
+
 # Collect info from the tags
 collect_info = []
 for tag in tags:

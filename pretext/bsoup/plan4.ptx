@@ -19,6 +19,7 @@
         <code xml:space="preserve">
 # Get first tag of a certain type from the soup
 tag = soup.find('a', class_='item-teaser--heading-link')
+
 # Get info from tag
 info = tag.get('href')
         </code>
@@ -111,7 +112,7 @@ info = tag.get('href')
             <caption>Link to Barb's page</caption>
           </figure>
         </statement>
-        <choices randomize="yes">
+        <choices>
           <choice>
             <statement><p>https://www.si.umich.edu/people/barbara-ericson</p></statement>
             <feedback><p>No, this is the full link, but there is a relative link in the tag.</p></feedback>
@@ -136,16 +137,18 @@ info = tag.get('href')
           <p>
             If you wanted to get a link from the first 'a' tag on a webpage, which part(s) of the code below would you change? Click on those parts of the code.
           </p>
-          <program language="python" label="plan4_click-editor">
-            <code xml:space="preserve">
-# Get first tag of a certain type from the soup
-tag = soup.find('div', class_='Comments_StyledComments-dzzyvm-0 dvnRbr')
-
-# Get info from tag
-info = tag.text
-            </code>
-          </program>
         </statement>
+        <areas language="python">
+      
+<cline><area correct="no"># Get first tag of a certain type from the soup</area></cline>
+<cline><area correct="no">tag = soup.find(</area><area correct="yes">'div', class_='Comments_StyledComments-dzzyvm-0 dvnRbr'</area><area correct="no">)</area></cline>
+<cline></cline>
+<cline><area correct="no"># Get info from tag</area></cline>
+<cline><area correct="no">info = tag.</area><area correct="yes">text</area></cline>
+        </areas>
+        <feedback>
+    <p>Check out the example of this plan above to identify the area that should be changed.</p>
+        </feedback>
       </activity>
 
       <p>Check out the image below, that inspects the description of the North Quad dining hall.</p>
@@ -161,25 +164,25 @@ info = tag.text
           </p>
         </statement>
         <blocks numbered="left">
-          <block>
-            <p># Get first tag of a certain type from the soup</p>
-            <p>tag = soup.find('span', style='font-weight: 400;')</p>
+          <block order = "2">
+           <choice correct="yes">
+            <cline># Get first tag of a certain type from the soup</cline>
+            <cline>tag = soup.find('span', style='font-weight: 400;')</cline>
+           </choice>
+           <choice>
+            <cline># Get first tag of a certain type from the soup</cline>
+            <cline>tag = soup.find('span')</cline>
+           </choice>
           </block>
-          <block>
-            <p># Get first tag of a certain type from the soup</p>
-            <p>tag = soup.find('span') #paired</p>
-          </block>
-          <block>
-            <p># Get info from tag</p>
-            <p>info = tag.text</p>
-          </block>
-          <block>
-            <p># Get info from tag</p>
-            <p>info = tag.get('href') #distractor</p>
-          </block>
-          <block>
-            <p># Get all tags of a certain type from the soup</p>
-            <p>tags = soup.find_all('p')#distractor</p>
+          <block order = "1">
+          <choice correct="yes">
+            <cline># Get info from tag</cline>
+            <cline>info = tag.text</cline>
+          </choice>
+          <choice>
+            <cline># Get info from tag</cline>
+            <cline>info = tag.get('href')</cline>
+          </choice>
           </block>
         </blocks>
       </activity>

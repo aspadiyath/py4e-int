@@ -36,10 +36,11 @@
       <p>
         Here is how to get <strong>text</strong> from all the <strong>'h3'</strong> tags from webpage:
       </p>
-      <program language="python3">
-        <code xml:space="preserve">
+      <program language="python3" label="plan5-example-editor">
+        <code>
 # Get all tags of a certain type from the soup
 tags = soup.find_all('h3')
+
 # Collect info from the tags
 collect_info = []
 for tag in tags:
@@ -152,7 +153,7 @@ for tag in tags:
             <caption>h2 tag on dining page</caption>
           </figure>
         </statement>
-        <choices randomize="yes">
+        <choices>
           <choice correct="yes">
             <statement><p>'h2', class_='menuTitle'</p></statement>
             <feedback><p>Correct! This is how you would describe the tag type in our web scraping code.</p></feedback>
@@ -177,27 +178,25 @@ for tag in tags:
           <p>
             Right now, this code gets the <em>text</em> from all 'h3' tags in the webpage. If you wanted to get the <em>links</em> from all the 'a', class_='headline' tags in the webpage, which part(s) of the code below would you change?
           </p>
-          <program language="python" label="plan5_click-editor">
-            <code xml:space="preserve">
-# Get all tags of a certain type from the soup
-tags = soup.find_all('h3')
-
-# Collect info from the tags
-collect_info = []
-for tag in tags:
-    # Get info from tag
-    info = tag.text
-    collect_info.append(info)
-            </code>
-          </program>
-        </statement>
+           </statement>
+          <areas language="python" >
+<cline><area correct="no"># Get all tags of a certain type from the soup</area></cline>
+<cline><area correct="no">tags = soup.find_all('h3')</area></cline>
+<cline></cline>
+<cline><area correct="no"># Collect info from the tags</area></cline>
+<cline><area correct="no">collect_info = [] </area></cline>
+<cline><area correct="no">for tag in tags:</area></cline>
+<cline><area correct="no">    # Get info from tag</area></cline>
+<cline><area correct="no">    info = </area><area correct="yes">tag.text</area></cline>
+<cline><area correct="no">    collect_info.append(info)</area></cline>
+          </areas>
       </activity>
 
       <activity label="plan5_fill_v2" xml:id="plan5_fill_v2">
         <statement>
-          <p>Fill in the plan in order to get the text from all <c>&lt;div class="headline"&gt;</c> tags on a webpage.</p>
-          <program language="python3" label="plan5_fill_v2-editor">
-            <code xml:space="preserve">
+          <p>Fill in the blank areas of the plan in order to get the text from all <c>&lt;div class="headline"&gt;</c> tags on a webpage.</p>
+          <program language="python3" label="plan5_fill_v2-editor" interactive="activecode" >
+            <code>
 # Get all tags of a certain type from the soup
 tags = soup.find_all( _______ )
 

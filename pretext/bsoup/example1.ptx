@@ -11,7 +11,7 @@
         <caption>Scrolling around the Cottage Inn locations page to see that there are a lot of locations</caption>
       </figure>
       <p>If only you could write a little Python to easily collect them all...</p>
-      <p>It turns out that you can! Run the code below to see what it collects.</p>
+      <p>It turns out that you can!</p>
 
       <activity label="cottage_inn_example" xml:id="cottage_inn_example">
         <statement>

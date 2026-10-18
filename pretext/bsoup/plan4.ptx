@@ -189,9 +189,9 @@ info = tag.get('href')
 
       <activity label="get_link_fill" xml:id="get_link_fill">
         <statement>
-          <p>What is the code to get a link from a tag?</p>
+          <p>What should come after <c>tag.</c> to get the url for the link? <fillin width="20" mode="string" answer="get('href')"/></p>
           <program language="python3"  interactive="activecode" label="get_link_fill-editor">
-            <code xml:space="preserve">
+            <code>
 # Get first tag of a certain type from the soup
 tags = soup.find('a', class_='announcement')
 
@@ -200,6 +200,25 @@ info = tag. _______
             </code>
           </program>
         </statement>
+        <evaluation>
+    <evaluate>
+      <test correct="yes">
+        <strcmp use-answer="yes"/>
+        <feedback>
+          <p>
+            Correct! Use <c>get('href')</c>.
+          </p>
+        </feedback>
+      </test>
+      <test>
+        <feedback>
+          <p>
+            Not quite. Use <c>get</c>.
+          </p>
+        </feedback>
+      </test>
+      </evaluate> 
+      </evaluation>
       </activity>
 
       <note>

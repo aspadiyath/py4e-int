@@ -22,13 +22,14 @@
       <p>Here is the code that you assembled from the plans. Now that you've assembled the correct plans, fill in the blanks to complete the code.</p>
       <activity label="write_code_fill_in" xml:id="write_code_fill_in">
         <statement>
-          <p>Fill in the blanks to complete the code:</p>
+          <p>What goes after the <code>info =  tag.</code> <fillin name = "bsoup_aw3_1" width="20" mode="string" answer="text"/>?  What goes inside the <c>print(______)</c>: <fillin name = "bsoup_aw3_2"  width="20" mode="string" answer="collect_info"/></p>
           <program label="write_code_fill_in-editor" interactive="activecode" language="python3">
             <code>
-#Get the webpage
-# Load libraries for web scraping
+# Get the webpage
+#  Load libraries for web scraping
 from bs4 import BeautifulSoup
 import requests
+
 # Get a soup from multiple URLs
 base_url = '___URL_goes_here___'
 endings = ['_endings_', '_go_', '_here_']
@@ -39,9 +40,11 @@ for ending in endings:
 
     # Get all tags of a certain type from the soup
     tags = soup.find_all(____tag_description_goes_here___)
+
     # Collect info from the tags
     collect_info = []
     for tag in tags:
+
         # Get info from tag
         info = tag.______
         collect_info.append(info)
@@ -52,5 +55,31 @@ for ending in endings:
             </code>
           </program>
         </statement>
+        <evaluation>
+    <evaluate submit="bsoup_aw3_1">
+      <test correct="yes">
+        <strcmp use-answer="yes"/>
+      </test>
+      <test>
+        <feedback>
+          <p>
+            Not quite. Use <c>text</c> to get the text content of the tag.
+          </p>
+        </feedback>
+      </test>
+    </evaluate>
+    <evaluate submit="bsoup_aw3_2">
+      <test correct="yes">
+        <strcmp use-answer="yes"/>
+      </test>
+      <test>
+        <feedback>
+          <p>
+            Not quite. Print the variable that contains all the collected data.
+          </p>
+        </feedback>
+      </test>
+    </evaluate>
+        </evaluation>
       </activity>
     </section>

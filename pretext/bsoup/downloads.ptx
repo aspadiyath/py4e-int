@@ -31,6 +31,7 @@ _____________________________________________
 # Load libraries for web scraping
 from bs4 import BeautifulSoup
 import requests
+
 # Get a soup from a URL 
 url = _________________________
 r = requests.get(url)
@@ -50,6 +51,7 @@ soup = BeautifulSoup(r.content, 'html.parser')
 # Load libraries for web scraping
 from bs4 import BeautifulSoup
 import requests
+
 # Get a soup from multiple URLs 
 base_url = ___________________________________
 endings =  ___________________________________
@@ -71,6 +73,7 @@ for ending in endings:
             <code xml:space="preserve">
 # Get first tag of a certain type from the soup
 tag = soup.find(___________)
+
 # Get info from the tag
 info = tag.________
             </code>
@@ -87,9 +90,11 @@ info = tag.________
             <code xml:space="preserve">
 # Get all tags of a certain type from the soup
 tags = soup.find_all(___________)
+
 # Collect info from the tags
 collect_info = []
 for tag in tags:
+
     # Get info from tag
     info = tag.________
     collect_info.append(info)
@@ -107,8 +112,10 @@ for tag in tags:
             <code xml:space="preserve">
 # Get first tag of a certain type from the soup
 first_tag = soup.find(___________)
+
 # Get all tags of a certain type from the first tag
 tags = first_tag.find_all(____________)
+
 # Collect info from the tags
 collect_info = []
 for tag in tags: 

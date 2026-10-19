@@ -12,6 +12,10 @@
       </figure>
       <p>If only you could write a little Python to easily collect them all...</p>
       <p>It turns out that you can!</p>
+      
+      <p>Below is code to collect all the Cottage Inn Pizza locations.  
+      Instead of scraping the data from the live site we are using a saved web page from the way back machine which
+      is a free archive of web pages. This is useful since live sites can change over time.</p>
 
       <activity label="cottage_inn_example" xml:id="cottage_inn_example">
         <statement>
@@ -20,7 +24,7 @@
           <program language="python3" interactive="activecode" label="cottage_inn_example-editor">
             <code xml:space="preserve">
 # Get the webpage
-# Load libraries for web scraping
+#  Load libraries for web scraping
 from bs4 import BeautifulSoup
 import requests
 
@@ -30,18 +34,19 @@ r = requests.get(url)
 soup = BeautifulSoup(r.content, 'html.parser')
 
 # Extract info from the page
-# Get all tags of a certain type from the soup
+#  Get all tags of a certain type from the soup
 tags = soup.find_all('h3')
 
 # Collect info from the tags
 collect_info = []
 for tag in tags:
+
     # Get info from tag
     info = tag.text
     collect_info.append(info)
 
 # Do something with the info
-# Print the info
+#  Print the info
 print(collect_info)
             </code>
           </program>

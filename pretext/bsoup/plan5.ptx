@@ -44,6 +44,7 @@ tags = soup.find_all('h3')
 # Collect info from the tags
 collect_info = []
 for tag in tags:
+
     # Get info from tag
     info = tag.text
     collect_info.append(info)
@@ -176,7 +177,7 @@ for tag in tags:
       <activity label="plan5_click" xml:id="plan5_click">
         <statement>
           <p>
-            Right now, this code gets the <em>text</em> from all 'h3' tags in the webpage. If you wanted to get the <em>links</em> from all the 'a', class_='headline' tags in the webpage, which part(s) of the code below would you change?
+            Right now, this code gets the <em>text</em> from all 'h3' tags in the webpage. If you wanted to get the <em>urls</em> from all the 'a', class_='headline' tags in the webpage, which part(s) of the code below would you change?
           </p>
            </statement>
           <areas language="python" >
@@ -187,18 +188,20 @@ for tag in tags:
 <cline><area correct="no">collect_info = [] </area></cline>
 <cline><area correct="no">for tag in tags:</area></cline>
 <cline><area correct="no">    # Get info from tag</area></cline>
-<cline><area correct="no">    info = </area><area correct="yes">tag.text</area></cline>
+<cline><area correct="no">    info = tag.</area><area correct="yes">text</area></cline>
 <cline><area correct="no">    collect_info.append(info)</area></cline>
           </areas>
       </activity>
 
       <activity label="plan5_fill_v2" xml:id="plan5_fill_v2">
         <statement>
-          <p>Fill in the blank areas of the plan in order to get the text from all <c>&lt;div class="headline"&gt;</c> tags on a webpage.</p>
-          <program language="python3" label="plan5_fill_v2-editor" interactive="activecode" >
+          <p>Fill in the blank areas of the plan in order to get the text from all <c>&lt;div class="headline"&gt;</c> tags on a webpage.
+          What should go in the first blank: <fillin name = "bsoup_plan5_1" width="20" mode="string" answer="'div', class_='headline'"/>
+          What should go in the second blank: <fillin name = "bsoup_plan5_2" width="20" mode="string" answer="text"/> </p>
+          <program language="python3" label="plan5_fill_v2-editor">
             <code>
 # Get all tags of a certain type from the soup
-tags = soup.find_all( _______ )
+tags = soup.find_all(_______ )
 
 # Collect info from the tags
 collect_info = []
@@ -209,6 +212,32 @@ for tag in tags:
             </code>
           </program>
         </statement>
+        <evaluation>
+        <evaluate submit="bsoup_aw3_1">
+      <test correct="yes">
+        <strcmp>'div', class_='headline'|"div", class_="headline"</strcmp>
+      </test>
+      <test>
+        <feedback>
+          <p>
+            Not quite. What tag and class are you looking for?
+          </p>
+        </feedback>
+      </test>
+    </evaluate>
+    <evaluate submit="bsoup_aw3_2">
+      <test correct="yes">
+        <strcmp use-answer="yes"/>
+      </test>
+      <test>
+        <feedback>
+          <p>
+            Not quite. What gets the text of a tag?
+          </p>
+        </feedback>
+      </test>
+    </evaluate>
+        </evaluation>
       </activity>
 
       <activity label="get_text_mc_2" xml:id="get_text_mc_2">

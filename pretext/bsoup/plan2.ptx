@@ -67,7 +67,7 @@ soup = BeautifulSoup(r.content, 'html.parser')
       <activity label="plan2_fill" xml:id="plan2_fill">
         <statement>
           <p>What should be after the <c>url = </c> in the code below to complete the plan in order to get a soup from the University of Michigan wikipedia page.
-           <fillin width="60" mode="string" answer="https://en.wikipedia.org/wiki/University_of_Michigan"/>
+           <fillin width="60" mode="string" answer='"https://en.wikipedia.org/wiki/University_of_Michigan"'/>
           </p>
 <program language="python" label="plan2-fill-editor" interactive="no">
   <code>
@@ -86,17 +86,17 @@ soup = BeautifulSoup(r.content, 'html.parser')
         <evaluation>
     <evaluate>
       <test correct="yes">
-        <strcmp use-answer="yes"/>
+        <strcmp>"https://en.wikipedia.org/wiki/University_of_Michigan"|'https://en.wikipedia.org/wiki/University_of_Michigan'</strcmp>
         <feedback>
           <p>
-            Correct! The URL for the University of Michigan wikipedia page is <c>https://en.wikipedia.org/wiki/University_of_Michigan</c>.
+            Correct! The URL for the University of Michigan wikipedia page is <c>https://en.wikipedia.org/wiki/University_of_Michigan and it should be a string.</c>.
           </p>
         </feedback>
       </test>
       <test>
         <feedback>
           <p>
-            Not quite. The URL for the University of Michigan wikipedia page is <c>https://en.wikipedia.org/wiki/University_of_Michigan</c>.
+            Not quite. The URL for the University of Michigan wikipedia page is <c>https://en.wikipedia.org/wiki/University_of_Michigan.  Also remember that it needs to be a string.</c>.
           </p>
         </feedback>
       </test>

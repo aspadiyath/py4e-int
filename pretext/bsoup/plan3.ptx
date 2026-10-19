@@ -64,7 +64,7 @@ for ending in endings:
           <program language="python3" interactive="activecode" label="plan3_edit_brewer-editor">
             <code>
 # Get the webpage
-# Load libraries for web scraping
+#  Load libraries for web scraping
 from bs4 import BeautifulSoup
 import requests
 
@@ -76,14 +76,15 @@ for ending in endings:
     r = requests.get(url)
     soup = BeautifulSoup(r.content, 'html.parser')
 
-    #Extract info from the page
-    # Get first tag of a certain type from the soup
+    # Extract info from the page
+    #  Get first tag of a certain type from the soup
     tag = soup.find('a', class_='item-teaser--heading-link')
+
     # Get link from tag
     info = tag.get('href')
 
-    #Do something with the info
-    # Print the info
+    # Do something with the info
+    #  Print the info
     print(info)
             </code>
           </program>

@@ -160,11 +160,11 @@ info = tag.get('href')
       <activity label="plan4_parsons" xml:id="plan4_parsons" indentation="hide" adaptive="yes" language="html">
         <statement>
           <p>
-            Choose the subgoals that get the text from the tag that has the description of the North Quad dining hall, and put them in the right order. You do not need to use all the blocks.
+            Choose the subgoals that prints the text from the tag that has the description of the North Quad dining hall, and put them in the right order. You do not need to use all the blocks.
           </p>
         </statement>
         <blocks numbered="left">
-          <block order = "2">
+          <block order = "3">
            <choice correct="yes">
             <cline># Get first tag of a certain type from the soup</cline>
             <cline>tag = soup.find('span', style='font-weight: 400;')</cline>
@@ -183,6 +183,10 @@ info = tag.get('href')
             <cline># Get info from tag</cline>
             <cline>info = tag.get('href')</cline>
           </choice>
+          </block>
+          <block order = "2">
+            <cline># Print the info</cline>
+            <cline>print(info)</cline>
           </block>
         </blocks>
       </activity>
@@ -203,17 +207,17 @@ info = tag. _______
         <evaluation>
     <evaluate>
       <test correct="yes">
-        <strcmp use-answer="yes"/>
+        <strcmp>get\('href'\)|get\("href"\)|\['href'\]|\["href"\]</strcmp>
         <feedback>
           <p>
-            Correct! Use <c>get('href')</c>.
+            Correct! Use <c>get('href') or ['href'].</c>.
           </p>
         </feedback>
       </test>
       <test>
         <feedback>
           <p>
-            Not quite. Use <c>get</c>.
+            Not quite. Use <c>get('attribute_name')</c> or <c>['attribute_name']</c>.
           </p>
         </feedback>
       </test>

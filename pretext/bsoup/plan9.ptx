@@ -30,11 +30,11 @@
       <activity label="plan9_fill_in" xml:id="plan9_fill_in">
         <statement>
           <p>Here is the code to collect all the locations from the Cottage Inn locations page.</p>
-          <p>What should fill the slot in Plan 9 below?</p>
+          <p>What should fill the slot in Plan 9 below to print the data that has been collected? <fillin width="20" mode="string" answer="collect_info"/></p>
           <program language="python3" label="plan9_fill_in-editor">
-            <code xml:space="preserve">
+            <code>
 # Get one webpage
-# Load libraries for web scraping
+#  Load libraries for web scraping
 from bs4 import BeautifulSoup
 import requests
 
@@ -43,33 +43,43 @@ url = 'https://cottageinn.com/pick-a-location/'
 r = requests.get(url)
 soup = BeautifulSoup(r.content, 'html.parser')
 
-#Get info from all tags of a certain type
-# Get all tags of a certain type from the soup
+# Get info from all tags of a certain type
+#  Get all tags of a certain type from the soup
 tags = soup.find_all('h3')
 
 # Collect info from the tags
 collect_info = []
 for tag in tags:
+
     # Get info from tag
     info = tag.text
     collect_info.append(info)
 
-#Print the info
 # Print the info
 print(___________)
             </code>
           </program>
         </statement>
-        <choices>
-          <choice correct="yes">
-            <statement><c>collect_info</c></statement>
-            <feedback><p>Correct.</p></feedback>
-          </choice>
-          <choice>
-            <statement><c>info</c></statement>
-            <feedback><p>Remember that the variable that goes in this plan depends on the plan above.</p></feedback>
-          </choice>
-        </choices>
+         <evaluation>
+    <evaluate>
+      <test correct="yes">
+        <strcmp>collect_info</strcmp>
+        <feedback>
+          <p>
+            Correct! Print <c>collect_info</c>.
+          </p>
+        </feedback>
+      </test>
+      <test>
+        <feedback>
+          <p>
+            Not quite. What varible is the one that has all the data in it?.
+          </p>
+        </feedback>
+      </test>
+      </evaluate> 
+      </evaluation>
+        
       </activity>
 
       <note>

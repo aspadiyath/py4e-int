@@ -48,7 +48,7 @@ for ending in endings:
     <subsection xml:id="plan3-how-to-use-this-plan">
       <title>Plan3: How to use this plan</title>
       <p>
-        Look at the webpages you want to scrape and determine which parts they have in common, and which parts are different. The parts that they have in common are the <c>base_url</c>. The parts that are different are the <c>endings</c>.
+        Look at the urls for the webpages you want to scrape and determine which parts they have in common, and which parts are different. The parts that they have in common are the <c>base_url</c>. The parts that are different are the <c>endings</c>.
       </p>
     </subsection>
 

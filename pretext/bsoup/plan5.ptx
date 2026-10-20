@@ -182,7 +182,7 @@ for tag in tags:
            </statement>
           <areas language="python" >
 <cline><area correct="no"># Get all tags of a certain type from the soup</area></cline>
-<cline><area correct="no">tags = soup.find_all('h3')</area></cline>
+<cline><area correct="no">tags = soup.find_all(</area><area correct="yes">'h3'</area><area correct="no">)</area></cline>
 <cline></cline>
 <cline><area correct="no"># Collect info from the tags</area></cline>
 <cline><area correct="no">collect_info = [] </area></cline>

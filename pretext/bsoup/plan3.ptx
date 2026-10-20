@@ -61,6 +61,8 @@ for ending in endings:
 
       <activity label="plan3_edit_brewer" xml:id="plan3_edit_brewer">
         <statement>
+          <p>Modify the code below to also include Dr Robin Brewer's page.</p>
+          </statement>
           <program language="python3" interactive="activecode" label="plan3_edit_brewer-editor">
             <code>
 # Get the webpage
@@ -88,7 +90,6 @@ for ending in endings:
     print(info)
             </code>
           </program>
-        </statement>
       </activity>
 
       <note>

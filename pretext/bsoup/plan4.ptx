@@ -88,11 +88,11 @@ info = tag.get('href')
           <row>
             <cell>The tag's link</cell>
             <cell>-&gt;</cell>
-            <cell><c>get('href')</c> or <c>get('href', None)</c></cell>
+            <cell><c>get('href')</c></cell>
           </row>
         </tabular>
       </table>
-      <p>One type of tag, the <c>a</c> tag, holds a link.</p>
+      <p>One type of tag, the <c>a</c> tag, is a link to another url.</p>
       <p>Here is the tag that creates the link to the North Quad dining hall page. It is an 'a' tag.</p>
       <figure xml:id="nq_link_img">
         <image source="bsoup/nq_link.png"/>
@@ -194,7 +194,7 @@ info = tag.get('href')
       <activity label="get_link_fill" xml:id="get_link_fill">
         <statement>
           <p>What should come after <c>tag.</c> to get the url for the link? <fillin width="20" mode="string" answer="get('href')"/></p>
-          <program language="python3"  interactive="activecode" label="get_link_fill-editor">
+          <program language="python3" label="get_link_fill-editor">
             <code>
 # Get first tag of a certain type from the soup
 tags = soup.find('a', class_='announcement')

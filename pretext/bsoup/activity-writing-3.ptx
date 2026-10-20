@@ -23,7 +23,7 @@
       <activity label="write_code_fill_in" xml:id="write_code_fill_in">
         <statement>
           <p>What goes after the <code>info =  tag.</code> <fillin name = "bsoup_aw3_1" width="20" mode="string" answer="text"/>?  What goes inside the <c>print(______)</c>: <fillin name = "bsoup_aw3_2"  width="20" mode="string" answer="collect_info"/></p>
-          <program label="write_code_fill_in-editor" interactive="activecode" language="python3">
+          <program label="write_code_fill_in-editor" language="python3">
             <code>
 # Get the webpage
 #  Load libraries for web scraping

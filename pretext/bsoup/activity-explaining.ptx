@@ -8,37 +8,43 @@
           <caption>News article links on Dr. Ericson's page</caption>
           <image source="bsoup/news_ericson_multiple.png" width="70%"/>
         </figure>
+
         <activity label="explain_answer" xml:id="explain_answer">
           <statement>
             <p>Write down your best guess of what the code does.</p>
           </statement>
+          <response/>
         </activity>
+
         <activity label="explain_code" xml:id="explain_code">
           <statement>
             <p>You can run the code below and see what happens.</p>
-            <program label="explain_code-editor" language="python3">
+            <program label="explain_code-editor" interactive="activecode" language="python3">
               <code>
-#Get the webpage
-# Load libraries for web scraping
+# Get the webpage
+#  Load libraries for web scraping
 from bs4 import BeautifulSoup
 import requests
+
 # Get a soup from a URL
 url = 'https://www.si.umich.edu/people/barbara-ericson'
 r = requests.get(url)
 soup = BeautifulSoup(r.content, 'html.parser')
 
-#Extract info from the webpage
-# Get all tags of a certain type from the soup
+# Extract info from the webpage
+#  Get all tags of a certain type from the soup
 tags = soup.find_all('a', class_='item-teaser--heading-link')
+
 # Collect info from the tags
 collect_info = []
 for tag in tags:
+
   # Get link from tag
   info = tag.get('href')
   collect_info.append(info)
 
-#Do something with the info
-# Get a soup from multiple URLs
+# Do something with the info
+#  Get a soup from multiple URLs
 base_url = 'https://www.si.umich.edu/'
 endings = collect_info
 for ending in endings:
@@ -48,6 +54,7 @@ for ending in endings:
 
     # Get all tags of a certain type from the soup
     tags = soup.find_all('p')
+
     # Collect info from the tags
     collect_info = []
     for tag in tags:

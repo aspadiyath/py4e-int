@@ -2,7 +2,7 @@
   <section xml:id="section-debugging">
     <title>Code debugging activity</title>
       <title>Code debugging activity</title>
-      <p>Every week, a new cat or dog was featured as the Ann Arbor’s 107one Pet-of-the-Week in 2020</url>. The code below is supposed to <em>get the pet of the week webpage from September of 2020, scrape the text of the title shown in the picture, and print it</em>.</p>
+      <p>Every week, a new cat or dog was featured as the Ann Arbor’s 107one Pet-of-the-Week in 2020. The code below is supposed to <em>get the pet of the week webpage from September of 2020, scrape the text of the title shown in the picture, and print it</em>.</p>
       <figure xml:id="fig-pet">
         <caption>The pet of the week from August 22, 2020 was Chester.</caption>
         <image source="bsoup/pet_of_the_week.png" width="70%"/>

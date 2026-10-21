@@ -342,7 +342,7 @@ print(res1)
         <p>What does <c>[0-9.]+</c> mean?</p>
       </statement>
       <choices>
-        <choice>
+        <choice correct="yes">
           <statement>
             <p>Match any digit or period one or more times</p>
           </statement>
@@ -366,7 +366,7 @@ print(res1)
             <p>The + outside of the [] means match one or more</p>
           </feedback>
         </choice>
-        <choice correct="yes">
+        <choice>
           <statement>
             <p>Match any digit or anything that isn't a new line zero to many times</p>
           </statement>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <section xml:id="section-debugging">
     <title>Code debugging activity</title>
-      <title>Code debugging activity</title>
       <p>Every week, a new cat or dog was featured as the Ann Arbor’s 107one Pet-of-the-Week in 2020. The code below is supposed to <em>get the pet of the week webpage from September of 2020, scrape the text of the title shown in the picture, and print it</em>.</p>
       <figure xml:id="fig-pet">
         <caption>The pet of the week from August 22, 2020 was Chester.</caption>
@@ -20,7 +19,7 @@ from bs4 import BeautifulSoup
 import requests
 
 # Get a soup from a URL (using the Wayback Machine)
-url = ''https://web.archive.org/web/20200927230337/https://www.hshv.org/petsoftheweek/''
+url = 'https://web.archive.org/web/20200927230337/https://www.hshv.org/petsoftheweek/'
 r = requests.get(url)
 soup = BeautifulSoup(r.content, 'html.parser')
 

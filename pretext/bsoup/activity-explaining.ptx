@@ -3,7 +3,7 @@
     <title>Code explaining activity</title>
       <subsection xml:id="subsec-relevant-tags">
         <title>Relevant tags</title>
-        <p>Here's the relevant tag from <code>https://www.si.umich.edu/people/barbara-ericson</code>:</p>
+        <p>Here's the relevant tag from <code>https://web.archive.org/web/20201024114050/https://www.si.umich.edu/people/barbara-ericson</code>:</p>
         <figure xml:id="fig-news-ericson">
           <caption>News article links on Dr. Ericson's page</caption>
           <image source="bsoup/news_ericson_multiple.png" width="70%"/>
@@ -27,7 +27,7 @@ from bs4 import BeautifulSoup
 import requests
 
 # Get a soup from a URL
-url = 'https://www.si.umich.edu/people/barbara-ericson'
+url = 'https://web.archive.org/web/20201024114050/https://www.si.umich.edu/people/barbara-ericson'
 r = requests.get(url)
 soup = BeautifulSoup(r.content, 'html.parser')
 
@@ -45,7 +45,7 @@ for tag in tags:
 
 # Do something with the info
 #  Get a soup from multiple URLs
-base_url = 'https://www.si.umich.edu/'
+base_url = 'https://web.archive.org/web/20201024114050/https://www.si.umich.edu/'
 endings = collect_info
 for ending in endings:
     url = base_url + ending

@@ -2,12 +2,12 @@
   <section xml:id="section-debugging">
     <title>Code debugging activity</title>
       <title>Code debugging activity</title>
-      <p>Every week, a new cat or dog is <url href="https://www.hshv.org/petsoftheweek/">the Ann Arbor’s 107one Pet-of-the-Week</url>. The code below is supposed to <strong>get the pet of the week webpage, scrape the text of the title shown in the picture, and print it</strong>.</p>
+      <p>Every week, a new cat or dog was featured as the Ann Arbor’s 107one Pet-of-the-Week in 2020</url>. The code below is supposed to <em>get the pet of the week webpage from September of 2020, scrape the text of the title shown in the picture, and print it</em>.</p>
       <figure xml:id="fig-pet">
-        <caption>The pet of the week from August 22, 2020 is Chester.</caption>
+        <caption>The pet of the week from August 22, 2020 was Chester.</caption>
         <image source="bsoup/pet_of_the_week.png" width="70%"/>
       </figure>
-      <p>However, it doesn't work! Instead of printing the title text, it prints nothing.</p>
+      <p>However, it doesn't work! Instead of printing the text of the <c>a</c> tag, it prints nothing.</p>
       <p>Can you fix it? Try to fix the buggy code below. Run the code to save your progress.</p>
       <activity label="debug_code_1" xml:id="debug_code_1">
         <statement>
@@ -19,8 +19,8 @@
 from bs4 import BeautifulSoup
 import requests
 
-# Get a soup from a URL
-url = 'https://www.hshv.org/petsoftheweek/'
+# Get a soup from a URL (using the Wayback Machine)
+url = ''https://web.archive.org/web/20200927230337/https://www.hshv.org/petsoftheweek/''
 r = requests.get(url)
 soup = BeautifulSoup(r.content, 'html.parser')
 

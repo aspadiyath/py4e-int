@@ -45,7 +45,7 @@ for tag in tags:
 
 # Do something with the info
 #  Get a soup from multiple URLs
-base_url = 'https://web.archive.org/web/20201024114050/https://www.si.umich.edu/'
+base_url = ''https://web.archive.org''
 endings = collect_info
 for ending in endings:
     url = base_url + ending
